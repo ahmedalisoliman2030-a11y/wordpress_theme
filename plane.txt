@@ -1,0 +1,177 @@
+وثيقة مواصفات المشروع: 3AAi-Theme
+الهدف: بناء ثيم ووردبريس (FSE Block Theme) مخصص للشركات التقنية، جاهز للنشر على مستودع WordPress.org. اسم الثيم: 3AAi-Theme النسخة: 1.0.0 المؤلف: Ahmed Ali Abdul Latif Soliman
+
+المرحلة 1: التأسيس والهيكلية (Setup & Structure Spec)
+التعليمات للوكيل: "قم بإنشاء هيكل المجلدات والملفات الأساسية للثيم بناءً على المواصفات التالية بدقة. لا تقم بإضافة أكواد معقدة، فقط البنية التحتية."
+
+المواصفات:
+
+المجلد الجذري: 3aai-theme
+
+ملف style.css: يجب أن يحتوي على الترويسة القياسية لووردبريس.
+
+Theme Name: 3AAi-Theme
+
+Author: Ahmed Ali Abdul Latif Soliman
+
+Description: A modern, dark-mode ready FSE theme designed for tech companies, startups, and SaaS projects. Optimized for speed and accessibility.
+
+Requires at least: 6.4
+
+Tested up to: 6.7
+
+Requires PHP: 7.4
+
+Version: 1.0.0
+
+Tags: full-site-editing, custom-colors, custom-menu, editor-style, featured-images, rtl-language-support, portfolio, technology.
+
+License: GNU General Public License v2 or later.
+
+المجلدات الفرعية:
+
+/assets (بداخله /images, /css, /js, /fonts)
+
+/parts (بداخله header.html, footer.html)
+
+/templates (بداخله index.html, single.html, page.html, 404.html, archive.html)
+
+/patterns (لأنماط البلوكات PHP)
+
+ملف functions.php: يحتوي فقط على دالة wp_enqueue_scripts لتحميل ملف الستايل، ودالة add_theme_support('block-templates').
+
+ملف index.php: ملف فارغ تماماً (للتوافق فقط) يحتوي تعليق: // Silence is golden.
+
+المرحلة 2: نظام التصميم (Design System Spec - theme.json)
+التعليمات للوكيل: "قم بكتابة ملف theme.json كامل وصحيح. هذا الملف هو قلب الثيم. يجب أن يعكس هوية شركة تقنية."
+
+المواصفات:
+
+الإعدادات (Settings):
+
+appearanceTools: true
+
+layout: contentSize "800px", wideSize "1200px".
+
+الألوان (Palette): يجب أن تكون أسماء المتغيرات دلالية (Semantic).
+
+Base: #0f172a (أزرق داكن جداً للخلفية - Tech Dark Mode vibes).
+
+Contrast: #ffffff (للنصوص).
+
+Primary: #3b82f6 (أزرق تقني ساطع).
+
+Secondary: #8b5cf6 (بنفسجي متدرج).
+
+Accent: #10b981 (أخضر للنجاح/الأزرار).
+
+الخطوط (Typography):
+
+استدعاء خطوط النظام كخيار أول (System Fonts) للأداء، مع خيار Inter للغة الإنجليزية و Cairo أو Tajawal للغة العربية.
+
+الأنماط (Styles):
+
+اجعل الخلفية الافتراضية للجسم (Body) هي لون Base.
+
+اجعل لون النص الافتراضي هو Contrast.
+
+تخصيص الأزرار (Buttons): حواف دائرية (Radius 8px)، لا حدود (No border)، وتأثير Hover يغير الشفافية.
+
+المرحلة 3: القوالب والأجزاء (Templates Spec)
+التعليمات للوكيل: "قم بتوليد كود HTML الخاص بقوالب FSE. استخدم الـ Semantic HTML وعلامات البلوكات القياسية (wp:group, wp:heading, etc)."
+
+المواصفات:
+
+parts/header.html:
+
+يحتوي على wp:group بعرض كامل (Full Width).
+
+بداخله row يحتوي على:
+
+wp:site-logo (يسار).
+
+wp:navigation (يمين).
+
+تأكد من وجود sticky position إذا أمكن.
+
+parts/footer.html:
+
+يحتوي على 3 أعمدة:
+
+نبذة عن الشركة والشعار.
+
+روابط سريعة (Navigation).
+
+أيقونات التواصل الاجتماعي وحقوق النشر.
+
+templates/index.html:
+
+استدعاء الهيدر.
+
+wp:query لعرض أحدث المقالات (News/Blog) بتصميم Grid (شبكة).
+
+استدعاء الفوتر.
+
+templates/single.html (للمقالات):
+
+عرض الصورة البارزة (Featured Image) بعرض واسع.
+
+العنوان (H1).
+
+المحتوى (Post Content).
+
+التنقل بين المقالات والتعليقات.
+
+المرحلة 4: الأنماط الوظيفية (Patterns Spec - The Unique Value)
+التعليمات للوكيل: "قم بكتابة ملفات PHP داخل مجلد /patterns لكل نمط من الأنماط التالية. يجب أن تسجل الأنماط نفسها باستخدام دالة الرأس (Header Comment) الخاصة بالأنماط."
+
+المواصفات:
+
+Hero Section (patterns/hero-tech.php):
+
+خلفية داكنة مع تدرج لوني خفيف.
+
+عنوان H1 ضخم: "Build Future Tech".
+
+وصف مختصر.
+
+زرين: "Get Started" (Primary) و "Learn More" (Outline).
+
+صورة على اليسار (أو اليمين حسب اللغة) تمثل Dashboard أو تطبيق.
+
+Services Grid (patterns/services.php):
+
+عنوان القسم: "Our Expertise".
+
+شبكة من 3 أعمدة (Columns).
+
+كل عمود يحتوي على: أيقونة (placeholder)، عنوان H3، ووصف نصي.
+
+Tech Stack (patterns/tech-stack.php):
+
+شريط شعارات (Logos) باللون الرمادي (Opacity 0.5) وعند التحويم تصبح ملونة.
+
+Pricing Table (patterns/pricing.php):
+
+3 بطاقات.
+
+البطاقة الوسطى مميزة (Featured) ولها حدود ملونة بلون Primary.
+
+المرحلة 5: الجودة والتجهيز للنشر (Submission Readiness Spec)
+التعليمات للوكيل: "تحقق من المتطلبات النهائية وتجهيز الملفات المساعدة للنشر."
+
+المواصفات:
+
+ملف readme.txt:
+
+قم بإنشاء محتوى الملف بتنسيق Markdown المتوافق مع ووردبريس.
+
+يجب أن يتضمن أقسام: Description, Installation, Copyright, Changelog.
+
+الترجمة (Localization):
+
+تأكد من أن كل النصوص الثابتة في ملفات PHP (الأنماط) مغلفة بدالة esc_html_e('text', '3aai-theme').
+
+الصورة المصغرة (screenshot.png):
+
+(ملاحظة لك: اطلب من الوكيل توليد وصف للصورة لتصممها أنت، أو استخدم أداة تصميم. المقاس المطلوب 1200x900px).
