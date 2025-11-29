@@ -13,73 +13,59 @@
 			"palette": [
 				{
 					"slug": "base",
-					"color": "#0f172a",
-					"name": "Base"
+					"color": "#f8fafc",
+					"name": "Base (Light Background)"
 				},
 				{
 					"slug": "contrast",
-					"color": "#ffffff",
-					"name": "Contrast"
+					"color": "#1e293b",
+					"name": "Contrast (Dark Text)"
 				},
 				{
 					"slug": "primary",
-					"color": "#3b82f6",
-					"name": "Primary"
+					"color": "#6366f1",
+					"name": "Primary (Vibrant Indigo)"
 				},
 				{
 					"slug": "secondary",
-					"color": "#8b5cf6",
-					"name": "Secondary"
+					"color": "#ec4899",
+					"name": "Secondary (Cheerful Pink)"
 				},
 				{
 					"slug": "accent",
-					"color": "#10b981",
-					"name": "Accent"
-				},
-				{
-					"slug": "error",
-					"color": "#ef4444",
-					"name": "Error"
-				},
-				{
-					"slug": "warning",
-					"color": "#f59e0b",
-					"name": "Warning"
-				},
-				{
-					"slug": "info",
 					"color": "#06b6d4",
-					"name": "Info"
+					"name": "Accent (Cyan)"
 				},
 				{
 					"slug": "surface",
-					"color": "#1e293b",
-					"name": "Surface"
+					"color": "#ffffff",
+					"name": "Surface (White Cards)"
 				},
 				{
 					"slug": "muted",
-					"color": "#64748b",
+					"color": "#94a3b8",
 					"name": "Muted"
 				}
 			],
 			"gradients": [
 				{
 					"slug": "primary-gradient",
-					"gradient": "linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)",
-					"name": "Primary Gradient"
+					"gradient": "linear-gradient(135deg, #6366f1 0%, #ec4899 100%)",
+					"name": "Cheerful Gradient"
 				},
 				{
-					"slug": "dark-gradient",
-					"gradient": "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
-					"name": "Dark Gradient"
+					"slug": "light-gradient",
+					"gradient": "linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%)",
+					"name": "Light Gradient"
 				},
 				{
 					"slug": "accent-gradient",
-					"gradient": "linear-gradient(135deg, #10b981 0%, #06b6d4 100%)",
-					"name": "Accent Gradient"
+					"gradient": "linear-gradient(135deg, #06b6d4 0%, #6366f1 100%)",
+					"name": "Ocean Gradient"
 				}
 			]
 		},
+
 		"typography": {
 			"defaultFontSizes": false,
 			"fontFamilies": [
