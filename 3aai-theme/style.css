@@ -1,0 +1,19 @@
+/*
+Theme Name: 3AAi-Theme
+Author: Ahmed Ali Abdul Latif Soliman
+Description: A modern, dark-mode ready FSE theme designed for tech companies, startups, and SaaS projects. Optimized for speed and accessibility.
+Requires at least: 6.4
+Tested up to: 6.7
+Requires PHP: 7.4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: 3aai-theme
+Tags: full-site-editing, custom-colors, custom-menu, editor-style, featured-images, rtl-language-support, portfolio, technology
+*/
+
+/*
+ * This theme uses the block editor for site editing.
+ * All styling is handled through theme.json and block styles.
+ * This file is required for theme recognition by WordPress.
+ */
