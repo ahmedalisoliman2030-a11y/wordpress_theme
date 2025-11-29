@@ -5,6 +5,7 @@
  * Categories: 3aai-patterns, featured
  * Description: A modern hero section with gradient background, heading, description, and call-to-action buttons
  */
+$hero_image = get_template_directory_uri() . '/assets/images/hero-placeholder.png';
 ?>
 
 <!-- wp:cover {"url":"","dimRatio":0,"overlayColor":"base","minHeight":600,"gradient":"dark-gradient","contentPosition":"center center","isDark":true,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|3xl","bottom":"var:preset|spacing|3xl"}}}} -->
@@ -55,7 +56,7 @@
                 <!-- wp:column {"verticalAlignment":"center","width":"45%"} -->
                 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%">
                     <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"16px"}}} -->
-                    <figure class="wp-block-image size-large has-custom-border"><img src=""
+                    <figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url($hero_image); ?>"
                             alt="<?php echo esc_attr__('Dashboard Preview', '3aai-theme'); ?>"
                             style="border-radius:16px" /></figure>
                     <!-- /wp:image -->
